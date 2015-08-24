@@ -271,6 +271,7 @@ VS.ui.SearchBox = Backbone.View.extend({
       app: this.app,
       showFacets: this.options.showFacets
     });
+    this.closeAutocomplete = input.closeAutocomplete.bind(input);
     this.$('.VS-search-inner').append(input.render().el);
     this.inputViews.push(input);
   },
