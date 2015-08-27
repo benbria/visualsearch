@@ -1060,6 +1060,7 @@ VS.ui.SearchInput = Backbone.View.extend({
 
     // Renders the results grouped by the categories they belong to.
     this.box.data('ui-autocomplete')._renderMenu = function(ul, items) {
+      ul.append('<li><div id="close-autocomplete" class="VS-icon-cancel-2"></div></li>');
       var category = '';
       _.each(items, _.bind(function(item, i) {
         if (item.category && item.category != category) {
